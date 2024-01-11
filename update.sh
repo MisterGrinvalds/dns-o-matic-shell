@@ -12,7 +12,6 @@ urlencode() {
     done
 }
 
-# Usage
 USER=$(urlencode "$USER")
 PASSWORD=$(urlencode "$PASSWORD")
 HOST=$(urlencode "$HOST")

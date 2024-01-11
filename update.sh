@@ -18,5 +18,5 @@ HOST=$(urlencode "$HOST")
 DOMAIN=$(urlencode "$DOMAIN")
 IP=$(curl -s http://myip.dnsomatic.com/)
 
-RESULT=$(echo "http://$USER:$PASSWORD@updates.dnsomatic.com/nic/update?hostname=$HOST$DOMAIN&myip=$IP&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG")
+RESULT=$(echo "http://$USER:$PASSWORD@updates.dnsomatic.com/nic/update?myip=$IP&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG")
 echo $RESULT

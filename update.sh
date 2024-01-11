@@ -16,6 +16,7 @@ USER=$(urlencode "$USER")
 PASSWORD=$(urlencode "$PASSWORD")
 HOST=$(urlencode "$HOST")
 DOMAIN=$(urlencode "$DOMAIN")
-IP=$(curl -s http://myip.dnsomatic.com/)
+IP=$(dig @resolver1.opendns.com myip.opendns.com +short)
+
 
 curl "http://$USER:$PASSWORD@updates.dnsomatic.com/nic/update?myip=$IP&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG"
